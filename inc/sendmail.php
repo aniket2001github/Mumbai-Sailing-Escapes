@@ -7,10 +7,10 @@ $mail = new PHPMailer();
 
 //$mail->SMTPDebug = 3; // Enable verbose debug output
 $mail->isSMTP(); // Set mailer to use SMTP
-$mail->Host = 'steelthemes.com'; // Specify main and backup SMTP servers
+$mail->Host = 'smtp.gmail.com'; // Specify main and backup SMTP servers
 $mail->SMTPAuth = true; // Enable SMTP authentication
-$mail->Username = 'cform@steelthemes.com'; // SMTP username
-$mail->Password = 'AsDf12**'; // SMTP password
+$mail->Username = 'nathaniket678@gmail.com'; // SMTP username
+$mail->Password = 'ixskvaaqdyiydlnb'; // SMTP password
 $mail->SMTPSecure = true; // Enable TLS encryption, `ssl` also accepted
 $mail->Port = 465; // TCP port to connect to
 
@@ -22,16 +22,16 @@ if( $_SERVER['REQUEST_METHOD'] == 'POST' ) {
 
  $name = $_POST['form_name'];
  $email = $_POST['form_email'];
- $subject = $_POST['form_subject'];
  $phone = $_POST['form_phone'];
+ $date = $_POST['form_date'];
  $message = $_POST['form_message'];
 
  $subject = isset($subject) ? $subject : 'New Message | Contact Form';
 
  $botcheck = $_POST['form_botcheck'];
 
- $toemail = 'templatecform@gmail.com'; // Your Email Address
- $toname = 'template_path'; // Your Name
+ $toemail = 'nathaniket678@gmail.com'; // Your Email Address
+ $toname = 'Aniket Nath'; // Your Name
 
  if( $botcheck == '' ) {
 
@@ -43,6 +43,7 @@ if( $_SERVER['REQUEST_METHOD'] == 'POST' ) {
  $name = isset($name) ? "Name: $name<br><br>" : '';
  $email = isset($email) ? "Email: $email<br><br>" : '';
  $phone = isset($phone) ? "Phone: $phone<br><br>" : '';
+ $date = isset($date) ? "Date: $date<br><br>" : '';
  $message = isset($message) ? "Message: $message<br><br>" : '';
 
  $referrer = $_SERVER['HTTP_REFERER'] ? '<br><br><br>This Form was submitted from: ' . $_SERVER['HTTP_REFERER'] : '';
