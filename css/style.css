@@ -3408,8 +3408,8 @@ select:focus {
 .footer{
     position: relative;
     display: block;
-    padding-top: 110px;
-    padding-bottom: 120px;
+    padding-top: 34px;
+    padding-bottom: 46px;
     z-index: 1;
 }
 .footer.style2 {
